@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khyber Star Laptop Center - Technology, Repair & Tourism Experts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            green: '#2ecc71',
+                            purple: '#9b59b6',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-gradient-to-br from-primary-purple to-primary-green rounded-lg flex items-center justify-center">
+                        <i class="fas fa-laptop text-white text-sm"></i>
+                    </div>
+                    <span class="text-2xl font-bold text-gray-800 tracking-tight">Khyber Star</span>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-primary-green font-semibold">Home</a>
+                    <a href="selling.html" class="text-gray-600 hover:text-primary-green transition">Laptop Selling</a>
+                    <a href="repairing.html" class="text-gray-600 hover:text-primary-green transition">Repairing</a>
+                    <a href="camera.html" class="text-gray-600 hover:text-primary-green transition">Camera Services</a>
+                    <a href="tourism.html" class="text-gray-600 hover:text-primary-green transition">Tourism</a>
+                </div>
+
+                <div class="hidden md:flex">
+                    <a href="#contact" class="btn-secondary rounded-full px-6 py-2 text-sm">SUPPORT</a>
+                </div>
+
+                <button class="md:hidden" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars text-2xl text-gray-600"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-2 space-y-2">
+                <a href="index.html" class="block text-primary-green font-semibold py-2">Home</a>
+                <a href="selling.html" class="block text-gray-600 hover:text-primary-green py-2">Laptop Selling</a>
+                <a href="repairing.html" class="block text-gray-600 hover:text-primary-green py-2">Repairing</a>
+                <a href="camera.html" class="block text-gray-600 hover:text-primary-green py-2">Camera Services</a>
+                <a href="tourism.html" class="block text-gray-600 hover:text-primary-green py-2">Tourism</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden pt-20">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop" alt="Technology Experts" class="w-full h-full object-cover">
+            <!-- Overlay gradient -->
+            <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-transparent"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 lg:px-8 relative z-10 w-full">
+            <div class="max-w-3xl hero-content text-white">
+                <div class="inline-block px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-sm font-semibold tracking-widest mb-6 uppercase">
+                    Welcome to Khyber Star
+                </div>
+                <h1 class="text-5xl lg:text-7xl font-extrabold mb-6 leading-tight text-white">
+                    Your Local <br>
+                    <span class="text-primary-green">Technology</span> Experts!
+                </h1>
+                <p class="text-xl text-gray-200 mb-8 max-w-xl leading-relaxed">
+                    Professional Laptop Services, Camera Installation & Pakistan Tourism Experts all under one roof. We deliver quality with trust.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="selling.html" class="btn-primary shadow-lg shadow-green-500/30 text-center w-fit flex items-center justify-center">
+                        GET STARTED <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10 text-white animate-bounce">
+            <i class="fas fa-chevron-down text-2xl"></i>
+        </div>
+    </section>
+
+    <!-- Partner Logos -->
+    <section class="py-10 border-b border-gray-100 bg-white">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-50 grayscale hover:grayscale-0 transition duration-300">
+                <i class="fab fa-apple text-4xl"></i>
+                <i class="fab fa-windows text-4xl"></i>
+                <i class="fab fa-aws text-4xl"></i>
+                <i class="fab fa-google text-4xl"></i>
+                <i class="fab fa-microsoft text-4xl"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h5 class="text-primary-green font-bold tracking-wider text-sm mb-2 uppercase">About Us</h5>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6 leading-tight">We have 10+ years of experience in repair & tech services</h2>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Khyber Star Laptop Center is your trusted partner for all things tech. From laptop sales and complex motherboard repairs to comprehensive CCTV installations, we bring professionalism and quality parts to every job.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm border border-gray-100">
+                            <i class="fas fa-check text-primary-green"></i>
+                            <span class="text-sm font-semibold text-gray-700">Experienced Professionals</span>
+                        </div>
+                        <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm border border-gray-100">
+                            <i class="fas fa-check text-primary-green"></i>
+                            <span class="text-sm font-semibold text-gray-700">Expert Technical Skills</span>
+                        </div>
+                        <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm border border-gray-100">
+                            <i class="fas fa-check text-primary-green"></i>
+                            <span class="text-sm font-semibold text-gray-700">Trustworthy Reviews</span>
+                        </div>
+                        <div class="flex items-center space-x-3 bg-white p-3 rounded-lg shadow-sm border border-gray-100">
+                            <i class="fas fa-check text-primary-green"></i>
+                            <span class="text-sm font-semibold text-gray-700">Affordable Diagnosis</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <!-- Collage of images -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <img src="../images/laptops/12.jpg" class="rounded-2xl shadow-lg w-full h-48 object-cover transform translate-y-8" alt="Laptop Repair">
+                        <img src="../images/reparing/3.jpg" class="rounded-2xl shadow-lg w-full h-64 object-cover" alt="Motherboard">
+                    </div>
+                    <!-- Abstract geometric background pattern could go here -->
+                    <div class="absolute -z-10 top-0 right-0 w-64 h-64 bg-green-100 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Services Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
+            <div class="section-header">
+                <h2>Our Featured Services That We Provide</h2>
+                <div class="divider"></div>
+                <p class="text-gray-500 mt-4 max-w-2xl mx-auto">We offer a wide range of professional services tailored to meet your technology and travel needs.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card p-8 text-center group cursor-pointer" onclick="window.location='repairing.html'">
+                    <div class="service-icon-box">
+                        <i class="fas fa-laptop-medical"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Computer Repair</h3>
+                    <p class="text-gray-500 text-sm mb-6 line-clamp-3">Expert diagnosis and repair for all laptop and desktop brands. Hardware fixes, screen replacements, and motherboard repairs.</p>
+                    <div class="w-10 h-10 mx-auto rounded-full bg-gray-50 flex items-center justify-center text-gray-400 group-hover:bg-primary-green group-hover:text-white transition">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card p-8 text-center group cursor-pointer" onclick="window.location='selling.html'">
+                    <div class="service-icon-box">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Laptop Sales</h3>
+                    <p class="text-gray-500 text-sm mb-6 line-clamp-3">Buy new and used laptops of premium quality. We offer Apple, Dell, HP, Lenovo and gaming PC setups.</p>
+                    <div class="w-10 h-10 mx-auto rounded-full bg-gray-50 flex items-center justify-center text-gray-400 group-hover:bg-primary-green group-hover:text-white transition">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card p-8 text-center group cursor-pointer" onclick="window.location='camera.html'">
+                    <div class="service-icon-box">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">CCTV Installation</h3>
+                    <p class="text-gray-500 text-sm mb-6 line-clamp-3">Professional security solutions including HD CCTV, IP Cameras, and Smart WiFi setups for home and office.</p>
+                    <div class="w-10 h-10 mx-auto rounded-full bg-gray-50 flex items-center justify-center text-gray-400 group-hover:bg-primary-green group-hover:text-white transition">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card p-8 text-center group cursor-pointer" onclick="window.location='repairing.html'">
+                    <div class="service-icon-box">
+                        <i class="fas fa-compact-disc"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Software Update</h3>
+                    <p class="text-gray-500 text-sm mb-6 line-clamp-3">Windows installation, virus removal, driver updates, and complete software setup for optimal performance.</p>
+                    <div class="w-10 h-10 mx-auto rounded-full bg-gray-50 flex items-center justify-center text-gray-400 group-hover:bg-primary-green group-hover:text-white transition">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card p-8 text-center group cursor-pointer" onclick="window.location='tourism.html'">
+                    <div class="service-icon-box">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Tourism Packages</h3>
+                    <p class="text-gray-500 text-sm mb-6 line-clamp-3">Explore the beauty of Pakistan with Tourist Boy Pakistan. Northern areas, KPK, Kashmir, and historical tours.</p>
+                    <div class="w-10 h-10 mx-auto rounded-full bg-gray-50 flex items-center justify-center text-gray-400 group-hover:bg-primary-green group-hover:text-white transition">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card p-8 text-center group cursor-pointer" onclick="window.location='repairing.html'">
+                    <div class="service-icon-box">
+                        <i class="fas fa-hdd"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Data Backup & Recovery</h3>
+                    <p class="text-gray-500 text-sm mb-6 line-clamp-3">Secure your important files or recover lost data from damaged hard drives, SSDs, and storage devices.</p>
+                    <div class="w-10 h-10 mx-auto rounded-full bg-gray-50 flex items-center justify-center text-gray-400 group-hover:bg-primary-green group-hover:text-white transition">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dark Banner Section -->
+    <section class="dark-section py-20">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold mb-6 leading-tight">We'll help you get back to work</h2>
+                    <p class="text-gray-300 mb-8 max-w-lg">
+                        Experiencing downtime due to faulty equipment? Our expert technicians provide fast, reliable repairs to ensure your business and personal life stay uninterrupted.
+                    </p>
+                    <a href="#contact" class="btn-primary">CONTACT US</a>
+                </div>
+                <div class="flex justify-center md:justify-end">
+                    <img src="../images/laptops/laptop-png.png" alt="Happy Clients" class="w-full max-w-md drop-shadow-2xl hover:scale-105 transition duration-300">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-white border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="p-4">
+                    <h3 class="text-4xl font-bold text-primary-green mb-2">5K+</h3>
+                    <p class="text-gray-500 font-medium">Repairs Done</p>
+                </div>
+                <div class="p-4">
+                    <h3 class="text-4xl font-bold text-primary-green mb-2">1.2K</h3>
+                    <p class="text-gray-500 font-medium">Laptops Sold</p>
+                </div>
+                <div class="p-4">
+                    <h3 class="text-4xl font-bold text-primary-green mb-2">300+</h3>
+                    <p class="text-gray-500 font-medium">CCTV Installed</p>
+                </div>
+                <div class="p-4">
+                    <h3 class="text-4xl font-bold text-primary-green mb-2">100%</h3>
+                    <p class="text-gray-500 font-medium">Satisfaction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
+            <div class="section-header">
+                <h2>Our Awesome Team</h2>
+                <div class="divider"></div>
+                <p class="text-gray-500 mt-4 max-w-2xl mx-auto">Meet the dedicated professionals behind our exceptional services.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mt-16">
+                <!-- Team 1 -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 text-center pt-16 relative mt-12 card-hover">
+                    <div class="absolute -top-12 left-1/2 transform -translate-x-1/2">
+                        <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="Team" class="w-24 h-24 rounded-full border-4 border-white shadow-lg object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-1">Engr. Imran Afridi</h3>
+                    <p class="text-primary-green text-sm font-semibold mb-4">Lead Technician</p>
+                    <p class="text-gray-500 text-sm mb-6">Expert in advanced motherboard diagnostics and complex hardware repairs with 10+ years of hands-on experience.</p>
+                </div>
+                <!-- Team 2 -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 text-center pt-16 relative mt-12 card-hover">
+                    <div class="absolute -top-12 left-1/2 transform -translate-x-1/2">
+                        <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Team" class="w-24 h-24 rounded-full border-4 border-white shadow-lg object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-1">Bilal Khan</h3>
+                    <p class="text-primary-green text-sm font-semibold mb-4">Customer Support</p>
+                    <p class="text-gray-500 text-sm mb-6">Always ready to help with technical queries, sales guidance, and ensuring you get the best tourism package.</p>
+                </div>
+                <!-- Team 3 -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 text-center pt-16 relative mt-12 card-hover">
+                    <div class="absolute -top-12 left-1/2 transform -translate-x-1/2">
+                        <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Team" class="w-24 h-24 rounded-full border-4 border-white shadow-lg object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-1">Ayesha Gul</h3>
+                    <p class="text-primary-green text-sm font-semibold mb-4">Tour Guide Expert</p>
+                    <p class="text-gray-500 text-sm mb-6">Passionate about showcasing the hidden beauties of Pakistan's northern areas to local and foreign tourists.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 lg:px-8 text-center">
+            <div class="section-header">
+                <h2>What Users Are Saying</h2>
+                <div class="divider"></div>
+            </div>
+            
+            <i class="fas fa-quote-left text-5xl text-gray-200 mb-6 block"></i>
+            <p class="text-xl text-gray-600 italic mb-10 leading-relaxed">
+                "Best laptop repair and camera installation service in Khyber! Fast, reliable and professional team. My laptop was completely dead and Engr. Imran fixed it within a day. Also booked a Swat tour with them which was amazing."
+            </p>
+            
+            <div class="flex items-center justify-center space-x-4">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User" class="w-14 h-14 rounded-full shadow-md">
+                <div class="text-left">
+                    <h4 class="font-bold text-gray-800">Ali Khan</h4>
+                    <p class="text-sm text-primary-purple font-semibold">Business Owner</p>
+                </div>
+            </div>
+
+            <!-- Avatar Row for design -->
+            <div class="flex justify-center space-x-4 mt-12 opacity-50">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-10 h-10 rounded-full border-2 border-gray-200 opacity-60">
+                <img src="https://randomuser.me/api/portraits/men/45.jpg" class="w-10 h-10 rounded-full border-2 border-gray-200 opacity-60">
+                <img src="https://randomuser.me/api/portraits/women/55.jpg" class="w-12 h-12 rounded-full border-2 border-primary-green p-1">
+                <img src="https://randomuser.me/api/portraits/men/77.jpg" class="w-10 h-10 rounded-full border-2 border-gray-200 opacity-60">
+                <img src="https://randomuser.me/api/portraits/women/88.jpg" class="w-10 h-10 rounded-full border-2 border-gray-200 opacity-60">
+            </div>
+        </div>
+    </section>
+
+    <!-- Why We Are Best Section -->
+    <section class="py-20 relative overflow-hidden" style="background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);">
+        <!-- Abstract background elements -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full -translate-y-1/2 translate-x-1/3"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-white opacity-5 rounded-full translate-y-1/3 -translate-x-1/4"></div>
+
+        <div class="max-w-7xl mx-auto px-4 lg:px-8 relative z-10 text-center">
+            <h2 class="text-4xl font-bold text-white mb-4">Why We Are Best From Others</h2>
+            <div class="w-16 h-1 bg-white mx-auto rounded mb-6 opacity-80"></div>
+            <p class="text-white/90 max-w-2xl mx-auto mb-16">We blend technical expertise with outstanding customer service to deliver solutions that simply work.</p>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-xl transform transition hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-6 text-primary-green text-2xl">
+                        <i class="fas fa-truck-fast"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Fast Delivery</h3>
+                    <p class="text-gray-500 text-sm">Quick turnaround time for all repairs and prompt delivery of purchased items right to your doorstep.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-xl transform transition hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-6 text-primary-green text-2xl">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Quality Parts</h3>
+                    <p class="text-gray-500 text-sm">We strictly use original and high-grade replacement parts to ensure the longevity of your devices.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-xl transform transition hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-6 text-primary-green text-2xl">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Free Diagnostics</h3>
+                    <p class="text-gray-500 text-sm">Bring your device to us for a complete checkup. We'll identify the root cause before you commit to any repair.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer Section -->
+    <footer id="contact" class="bg-gray-900 text-white pt-20 pb-10 border-t-4 border-primary-green">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <i class="fas fa-laptop text-3xl text-primary-green"></i>
+                        <span class="text-2xl font-bold tracking-tight">Khyber Star</span>
+                    </div>
+                    <p class="text-gray-400 mb-6 text-sm leading-relaxed">
+                        Your Trusted Technology & Support Partner in Khyber. Offering sales, repair, security solutions, and tourism packages.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-primary-green hover:text-white transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-primary-green hover:text-white transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-primary-green hover:text-white transition">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Company</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="index.html" class="hover:text-primary-green transition"><i class="fas fa-chevron-right text-xs mr-2 text-primary-green"></i> Home</a></li>
+                        <li><a href="selling.html" class="hover:text-primary-green transition"><i class="fas fa-chevron-right text-xs mr-2 text-primary-green"></i> Laptop Sales</a></li>
+                        <li><a href="repairing.html" class="hover:text-primary-green transition"><i class="fas fa-chevron-right text-xs mr-2 text-primary-green"></i> Repair Services</a></li>
+                        <li><a href="camera.html" class="hover:text-primary-green transition"><i class="fas fa-chevron-right text-xs mr-2 text-primary-green"></i> CCTV Installation</a></li>
+                        <li><a href="tourism.html" class="hover:text-primary-green transition"><i class="fas fa-chevron-right text-xs mr-2 text-primary-green"></i> Tourism Packages</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Support</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="#" class="hover:text-primary-green transition"><i class="fas fa-chevron-right text-xs mr-2 text-primary-green"></i> FAQ's</a></li>
+                        <li><a href="#" class="hover:text-primary-green transition"><i class="fas fa-chevron-right text-xs mr-2 text-primary-green"></i> Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-primary-green transition"><i class="fas fa-chevron-right text-xs mr-2 text-primary-green"></i> Terms & Condition</a></li>
+                        <li><a href="#" class="hover:text-primary-green transition"><i class="fas fa-chevron-right text-xs mr-2 text-primary-green"></i> Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Address</h4>
+                    <ul class="space-y-4 text-gray-400 text-sm">
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-map-marker-alt text-primary-green mt-1"></i>
+                            <span>Bara Bazar, Khyber Chowk, Shahbaz Plaza, 2nd Floor, Shop No. 4, District Khyber, Pakistan</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-envelope text-primary-green"></i>
+                            <span>khyberstarcnr@gmail.com</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-phone-alt text-primary-green mt-1"></i>
+                            <div class="flex flex-col">
+                                <span>0334-343-4300</span>
+                                <span>0333-920-6363</span>
+                                <span>0331-989-9956</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-500">
+                <p>© 2026 Khyber Star Laptop Center – All Rights Reserved. Designed with <i class="fas fa-heart text-red-500 mx-1"></i> for superior quality.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // GSAP Animations
+        gsap.from(".hero-content h1", { duration: 1, y: 30, opacity: 0, ease: "power3.out" });
+        gsap.from(".hero-content p", { duration: 1, y: 20, opacity: 0, delay: 0.2, ease: "power3.out" });
+        gsap.from(".hero-content a", { duration: 1, y: 20, opacity: 0, delay: 0.4, ease: "power3.out" });
+        
+        // Setup observer for scroll animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    if(entry.target.classList.contains('service-card') || entry.target.classList.contains('card-hover')){
+                        gsap.to(entry.target, {duration: 0.6, y: 0, opacity: 1, ease: "power2.out"});
+                    }
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Prepare cards for scroll animation
+        document.querySelectorAll('.service-card, .card-hover').forEach(el => {
+            gsap.set(el, {y: 50, opacity: 0});
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

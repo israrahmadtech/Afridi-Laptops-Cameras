@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khyber Star Laptop Center - Camera Services & CCTV Installation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            green: '#2ecc71',
+                            purple: '#9b59b6',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-gradient-to-br from-primary-purple to-primary-green rounded-lg flex items-center justify-center">
+                        <i class="fas fa-camera text-white text-sm"></i>
+                    </div>
+                    <span class="text-2xl font-bold text-gray-800 tracking-tight">Khyber Star</span>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-primary-green transition">Home</a>
+                    <a href="selling.html" class="text-gray-600 hover:text-primary-green transition">Laptop Selling</a>
+                    <a href="repairing.html" class="text-gray-600 hover:text-primary-green transition">Repairing</a>
+                    <a href="camera.html" class="text-primary-green font-semibold">Camera Services</a>
+                    <a href="tourism.html" class="text-gray-600 hover:text-primary-green transition">Tourism</a>
+                </div>
+
+                <div class="hidden md:flex">
+                    <a href="#install" class="btn-secondary rounded-full px-6 py-2 text-sm">BOOK INSTALLATION</a>
+                </div>
+
+                <button class="md:hidden" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars text-2xl text-gray-600"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-2 space-y-2">
+                <a href="index.html" class="block text-gray-600 hover:text-primary-green py-2">Home</a>
+                <a href="selling.html" class="block text-gray-600 hover:text-primary-green py-2">Laptop Selling</a>
+                <a href="repairing.html" class="block text-gray-600 hover:text-primary-green py-2">Repairing</a>
+                <a href="camera.html" class="block text-primary-green font-semibold py-2">Camera Services</a>
+                <a href="tourism.html" class="block text-gray-600 hover:text-primary-green py-2">Tourism</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden pt-20">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=2058&auto=format&fit=crop" alt="Security Cameras" class="w-full h-full object-cover">
+            <!-- Overlay gradient -->
+            <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-transparent"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 lg:px-8 relative z-10 w-full">
+            <div class="max-w-3xl hero-content text-white">
+                <div class="inline-block px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-sm font-semibold tracking-widest mb-6 uppercase">
+                    Security Solutions
+                </div>
+                <h1 class="text-5xl lg:text-7xl font-extrabold mb-6 leading-tight text-white">
+                    Secure Your <br> <span class="text-primary-green">Space</span>
+                </h1>
+                <p class="text-xl text-gray-200 mb-8 max-w-xl leading-relaxed">
+                    Professional CCTV, IP Camera, WiFi Camera, Handycam & Security Solutions for homes, offices, and commercial spaces.
+                </p>
+                <ul class="mb-8 space-y-3">
+                    <li class="flex items-center text-gray-200 font-medium">
+                        <div class="w-6 h-6 rounded-full bg-primary-green/20 text-primary-green flex items-center justify-center mr-3 text-sm border border-primary-green/50"><i class="fas fa-video"></i></div> HD CCTV & Analog Systems
+                    </li>
+                    <li class="flex items-center text-gray-200 font-medium">
+                        <div class="w-6 h-6 rounded-full bg-primary-green/20 text-primary-green flex items-center justify-center mr-3 text-sm border border-primary-green/50"><i class="fas fa-wifi"></i></div> IP & Smart WiFi Cameras
+                    </li>
+                    <li class="flex items-center text-gray-200 font-medium">
+                        <div class="w-6 h-6 rounded-full bg-primary-green/20 text-primary-green flex items-center justify-center mr-3 text-sm border border-primary-green/50"><i class="fas fa-mobile-alt"></i></div> Remote Mobile Monitoring
+                    </li>
+                </ul>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#products" class="btn-primary shadow-lg shadow-green-500/30 text-center w-fit flex items-center justify-center">
+                        VIEW PRODUCTS <i class="fas fa-arrow-down ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10 text-white animate-bounce">
+            <i class="fas fa-chevron-down text-2xl"></i>
+        </div>
+    </section>
+
+    <!-- Camera Products Listing Section -->
+    <section id="products" class="py-20 bg-gray-50 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
+            <div class="section-header">
+                <h2>Camera & Security Products</h2>
+                <div class="divider"></div>
+                <p class="text-gray-500 mt-4 max-w-2xl mx-auto">Explore our extensive range of high-quality surveillance and recording equipment.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- Product 1 -->
+                <div class="bg-white rounded-2xl shadow-lg card-hover overflow-hidden flex flex-col p-6">
+                    <div class="h-40 flex items-center justify-center mb-4">
+                        <img src="../images/cameras/3.png" alt="HD CCTV Camera" class="max-h-full object-contain transform hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="flex-grow flex flex-col text-center">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">HD CCTV Camera</h3>
+                        <p class="text-gray-500 text-sm mb-4">Night Vision, Motion Detection, Weatherproof</p>
+                        <div class="mt-auto">
+                            <span class="badge badge-green mb-2 block w-fit mx-auto">Indoor/Outdoor</span>
+                            <span class="text-xl font-extrabold text-primary-purple block mt-2">Rs. 7,500</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="bg-white rounded-2xl shadow-lg card-hover overflow-hidden flex flex-col p-6">
+                    <div class="h-40 flex items-center justify-center mb-4">
+                        <img src="../images/cameras/4.png" alt="IP Camera" class="max-h-full object-contain transform hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="flex-grow flex flex-col text-center">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Smart IP Camera</h3>
+                        <p class="text-gray-500 text-sm mb-4">Online Monitoring, High Quality Recording</p>
+                        <div class="mt-auto">
+                            <span class="badge badge-green mb-2 block w-fit mx-auto">Wireless Network</span>
+                            <span class="text-xl font-extrabold text-primary-purple block mt-2">Rs. 12,000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="bg-white rounded-2xl shadow-lg card-hover overflow-hidden flex flex-col p-6">
+                    <div class="h-40 flex items-center justify-center mb-4">
+                        <img src="../images/cameras/7.png" alt="WiFi Camera" class="max-h-full object-contain transform hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="flex-grow flex flex-col text-center">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">WiFi Dome Camera</h3>
+                        <p class="text-gray-500 text-sm mb-4">Smart Security, Easy Mobile Access</p>
+                        <div class="mt-auto">
+                            <span class="badge badge-green mb-2 block w-fit mx-auto">Smart Home</span>
+                            <span class="text-xl font-extrabold text-primary-purple block mt-2">Rs. 9,500</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="bg-white rounded-2xl shadow-lg card-hover overflow-hidden flex flex-col p-6">
+                    <div class="h-40 flex items-center justify-center mb-4">
+                        <img src="../images/cameras/5.png" alt="Handycam" class="max-h-full object-contain transform hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="flex-grow flex flex-col text-center">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Professional Handycam</h3>
+                        <p class="text-gray-500 text-sm mb-4">Event Recording, Crisp Audio/Video</p>
+                        <div class="mt-auto">
+                            <span class="badge badge-green mb-2 block w-fit mx-auto">Portable</span>
+                            <span class="text-xl font-extrabold text-primary-purple block mt-2">Rs. 18,000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Installation Services -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
+            <div class="section-header">
+                <h2>Installation & Security Setup</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <!-- HD CCTV Setup -->
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 card-hover flex flex-col sm:flex-row items-center sm:items-start gap-6">
+                    <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-2xl shrink-0">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">HD CCTV Networks</h3>
+                        <p class="text-gray-500 text-sm mb-4">Complete wiring, DVR/NVR configuration, and camera mounting for seamless continuous recording.</p>
+                        <ul class="text-sm font-medium text-gray-600 space-y-2">
+                            <li><i class="fas fa-check text-primary-green mr-2"></i> 1080p & 4K Resolution setup</li>
+                            <li><i class="fas fa-check text-primary-green mr-2"></i> Cloud storage configuration</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- IP Camera Setup -->
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 card-hover flex flex-col sm:flex-row items-center sm:items-start gap-6">
+                    <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-2xl shrink-0">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">IP Camera Infrastructure</h3>
+                        <p class="text-gray-500 text-sm mb-4">Enterprise-grade network camera installations featuring POE switches and advanced routing.</p>
+                        <ul class="text-sm font-medium text-gray-600 space-y-2">
+                            <li><i class="fas fa-check text-primary-green mr-2"></i> Multi-user access control</li>
+                            <li><i class="fas fa-check text-primary-green mr-2"></i> Centralized monitoring stations</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- WiFi/Smart Home Setup -->
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 card-hover flex flex-col sm:flex-row items-center sm:items-start gap-6">
+                    <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-2xl shrink-0">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Smart Home WiFi Cameras</h3>
+                        <p class="text-gray-500 text-sm mb-4">Quick, wireless installation for baby monitors, doorbell cameras, and indoor pet cams.</p>
+                        <ul class="text-sm font-medium text-gray-600 space-y-2">
+                            <li><i class="fas fa-check text-primary-green mr-2"></i> Mobile app synchronization</li>
+                            <li><i class="fas fa-check text-primary-green mr-2"></i> Motion alert configurations</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Handycam / Videography -->
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 card-hover flex flex-col sm:flex-row items-center sm:items-start gap-6">
+                    <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-2xl shrink-0">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Handycam Services</h3>
+                        <p class="text-gray-500 text-sm mb-4">We sell and repair professional handycams, providing lens cleaning and sensor calibration.</p>
+                        <ul class="text-sm font-medium text-gray-600 space-y-2">
+                            <li><i class="fas fa-check text-primary-green mr-2"></i> Professional Videography gear</li>
+                            <li><i class="fas fa-check text-primary-green mr-2"></i> Firmware updates & repair</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases/Camera Types Section -->
+    <section class="py-20 bg-gray-900 text-white dark-section">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
+            <div class="section-header">
+                <h2 class="text-white">Coverage for Every Need</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 text-center mt-12">
+                <div class="bg-gray-800/50 backdrop-blur-sm border border-gray-700 p-8 rounded-2xl card-hover">
+                    <div class="text-5xl text-primary-green mb-6"><i class="fas fa-building"></i></div>
+                    <h3 class="text-xl font-bold mb-4">Office & Commercial</h3>
+                    <p class="text-gray-400 text-sm mb-6">Comprehensive coverage for shops, conference rooms, parking lots, and reception areas.</p>
+                </div>
+                <div class="bg-gray-800/50 backdrop-blur-sm border border-gray-700 p-8 rounded-2xl card-hover transform md:-translate-y-6">
+                    <div class="text-5xl text-primary-green mb-6"><i class="fas fa-home"></i></div>
+                    <h3 class="text-xl font-bold mb-4">Residential Security</h3>
+                    <p class="text-gray-400 text-sm mb-6">Protect your family with outdoor weatherproof cameras and indoor baby/pet monitors.</p>
+                </div>
+                <div class="bg-gray-800/50 backdrop-blur-sm border border-gray-700 p-8 rounded-2xl card-hover">
+                    <div class="text-5xl text-primary-green mb-6"><i class="fas fa-industry"></i></div>
+                    <h3 class="text-xl font-bold mb-4">Industrial & PTZ</h3>
+                    <p class="text-gray-400 text-sm mb-6">Heavy-duty PTZ cameras with 360° rotation and auto-tracking for factory and warehouse monitoring.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Request Installation Form -->
+    <section id="install" class="py-20 bg-gray-50 border-t border-gray-200">
+        <div class="max-w-5xl mx-auto px-4 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-2xl p-8 md:p-12 text-gray-800 border border-gray-100 flex flex-col md:flex-row gap-12">
+                
+                <div class="md:w-1/3">
+                    <h3 class="text-3xl font-bold mb-4 text-gray-900">Book Installation</h3>
+                    <p class="text-gray-500 mb-8 text-sm leading-relaxed">Need security cameras set up? Get in touch with us to schedule a site visit and receive a professional quotation.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center shrink-0">
+                                <i class="fas fa-phone-alt text-primary-green"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold mb-1 text-gray-800">Call Us Directly</h5>
+                                <p class="text-gray-500 text-sm font-medium">0334-343-4300</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center shrink-0">
+                                <i class="fas fa-map-marker-alt text-primary-green"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold mb-1 text-gray-800">Visit Our Office</h5>
+                                <p class="text-gray-500 text-sm font-medium">Bara Bazar, Khyber</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:w-2/3 border-t md:border-t-0 md:border-l border-gray-100 md:pl-12 pt-8 md:pt-0">
+                    <form class="space-y-5">
+                        <div class="grid md:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                                <input type="text" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-primary-green focus:ring-2 focus:ring-green-100 transition" placeholder="John Doe">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                                <input type="tel" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-primary-green focus:ring-2 focus:ring-green-100 transition" placeholder="03xx-xxxxxxx">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Service Type</label>
+                            <select class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-primary-green focus:ring-2 focus:ring-green-100 transition appearance-none">
+                                <option>CCTV Installation</option>
+                                <option>IP Camera Setup</option>
+                                <option>WiFi Camera Services</option>
+                                <option>Camera Repair</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Premises Type / Message</label>
+                            <textarea rows="3" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-primary-green focus:ring-2 focus:ring-green-100 transition" placeholder="I need 4 cameras installed in my office..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full btn-primary text-lg mt-2">SUBMIT INQUIRY</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-white pt-16 pb-10 border-t-4 border-primary-green">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <i class="fas fa-camera text-3xl text-primary-green"></i>
+                        <span class="text-2xl font-bold tracking-tight">Khyber Star</span>
+                    </div>
+                    <p class="text-gray-400 mb-6 text-sm leading-relaxed">
+                        Your Trusted Technology & Security Partner in Khyber. Professional CCTV solutions you can count on.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Company</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="index.html" class="hover:text-primary-green transition">Home</a></li>
+                        <li><a href="camera.html" class="hover:text-primary-green transition text-primary-green">Camera Services</a></li>
+                        <li><a href="repairing.html" class="hover:text-primary-green transition">Repair Services</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Support</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="#" class="hover:text-primary-green transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-primary-green transition">Terms & Condition</a></li>
+                        <li><a href="#install" class="hover:text-primary-green transition">Book Installation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Contact</h4>
+                    <ul class="space-y-4 text-gray-400 text-sm">
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-map-marker-alt text-primary-green mt-1"></i>
+                            <span>Bara Bazar, Khyber Chowk, Pakistan</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-phone-alt text-primary-green"></i>
+                            <span>0334-343-4300</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-500">
+                <p>© 2026 Khyber Star Laptop Center – All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // GSAP Animations
+        gsap.from(".hero-content h1", { duration: 1, y: 30, opacity: 0, ease: "power3.out" });
+        gsap.from(".hero-content p", { duration: 1, y: 20, opacity: 0, delay: 0.2, ease: "power3.out" });
+        gsap.from(".hero-content ul li", { duration: 0.5, x: -20, opacity: 0, stagger: 0.1, delay: 0.4, ease: "power2.out" });
+        gsap.from(".hero-content a", { duration: 1, y: 20, opacity: 0, delay: 0.6, ease: "power3.out" });
+        
+        // Setup observer for scroll animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    if(entry.target.classList.contains('service-card') || entry.target.classList.contains('card-hover')){
+                        gsap.to(entry.target, {duration: 0.6, y: 0, opacity: 1, ease: "power2.out"});
+                    }
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.service-card, .card-hover').forEach(el => {
+            gsap.set(el, {y: 50, opacity: 0});
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

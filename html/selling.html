@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khyber Star Laptop Center - Laptop Sales & Purchase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            green: '#2ecc71',
+                            purple: '#9b59b6',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-gradient-to-br from-primary-purple to-primary-green rounded-lg flex items-center justify-center">
+                        <i class="fas fa-laptop text-white text-sm"></i>
+                    </div>
+                    <span class="text-2xl font-bold text-gray-800 tracking-tight">Khyber Star</span>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-primary-green transition">Home</a>
+                    <a href="selling.html" class="text-primary-green font-semibold">Laptop Selling</a>
+                    <a href="repairing.html" class="text-gray-600 hover:text-primary-green transition">Repairing</a>
+                    <a href="camera.html" class="text-gray-600 hover:text-primary-green transition">Camera Services</a>
+                    <a href="tourism.html" class="text-gray-600 hover:text-primary-green transition">Tourism</a>
+                </div>
+
+                <div class="hidden md:flex">
+                    <a href="#quote" class="btn-secondary rounded-full px-6 py-2 text-sm">GET QUOTE</a>
+                </div>
+
+                <button class="md:hidden" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars text-2xl text-gray-600"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-2 space-y-2">
+                <a href="index.html" class="block text-gray-600 hover:text-primary-green py-2">Home</a>
+                <a href="selling.html" class="block text-primary-green font-semibold py-2">Laptop Selling</a>
+                <a href="repairing.html" class="block text-gray-600 hover:text-primary-green py-2">Repairing</a>
+                <a href="camera.html" class="block text-gray-600 hover:text-primary-green py-2">Camera Services</a>
+                <a href="tourism.html" class="block text-gray-600 hover:text-primary-green py-2">Tourism</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden pt-20">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?q=80&w=2032&auto=format&fit=crop" alt="Premium Laptops" class="w-full h-full object-cover">
+            <!-- Overlay gradient -->
+            <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-transparent"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 lg:px-8 relative z-10 w-full">
+            <div class="max-w-3xl hero-content text-white">
+                <div class="inline-block px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-sm font-semibold tracking-widest mb-6 uppercase">
+                    Laptop Sales & Purchase
+                </div>
+                <h1 class="text-5xl lg:text-7xl font-extrabold mb-6 leading-tight text-white">
+                    Premium <span class="text-primary-green">Laptops</span> <br> For Every Need
+                </h1>
+                <p class="text-xl text-gray-200 mb-8 max-w-xl leading-relaxed">
+                    Sales & Purchase of all laptop models. High-quality laptops, gaming PCs, accessories, and printers at unbeatable prices.
+                </p>
+                <ul class="mb-8 space-y-3">
+                    <li class="flex items-center text-gray-200 font-medium">
+                        <div class="w-6 h-6 rounded-full bg-primary-green/20 text-primary-green flex items-center justify-center mr-3 text-sm border border-primary-green/50"><i class="fas fa-check"></i></div> All Laptop Models
+                    </li>
+                    <li class="flex items-center text-gray-200 font-medium">
+                        <div class="w-6 h-6 rounded-full bg-primary-green/20 text-primary-green flex items-center justify-center mr-3 text-sm border border-primary-green/50"><i class="fas fa-check"></i></div> Custom Gaming PCs
+                    </li>
+                    <li class="flex items-center text-gray-200 font-medium">
+                        <div class="w-6 h-6 rounded-full bg-primary-green/20 text-primary-green flex items-center justify-center mr-3 text-sm border border-primary-green/50"><i class="fas fa-check"></i></div> Printer & Accessories
+                    </li>
+                </ul>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#products" class="btn-primary shadow-lg shadow-green-500/30 text-center w-fit flex items-center justify-center">
+                        VIEW INVENTORY <i class="fas fa-arrow-down ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10 text-white animate-bounce">
+            <i class="fas fa-chevron-down text-2xl"></i>
+        </div>
+    </section>
+
+    <!-- Product Listing Section -->
+    <section id="products" class="py-20 bg-gray-50 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
+            <div class="section-header">
+                <h2>Our Premium Inventory</h2>
+                <div class="divider"></div>
+                <p class="text-gray-500 mt-4 max-w-2xl mx-auto">Explore our wide selection of new and used laptops, gaming setups, and accessories.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- Product Card 1 -->
+                <div class="bg-white rounded-2xl shadow-lg card-hover overflow-hidden flex flex-col">
+                    <div class="h-48 overflow-hidden bg-gray-100 relative">
+                        <span class="absolute top-4 right-4 badge badge-green z-10 bg-white">Excellent</span>
+                        <img src="../images/laptops/1.webp" alt="HP EliteBook" class="w-full h-full object-cover transform hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">HP EliteBook 840 G5</h3>
+                        <p class="text-gray-500 text-sm mb-4">Core i5 8th Gen, 8GB RAM, 256GB SSD</p>
+                        <div class="mt-auto flex justify-between items-center">
+                            <span class="text-xl font-extrabold text-primary-purple">Rs. 78,000</span>
+                            <button class="w-10 h-10 rounded-full bg-gray-50 text-gray-400 hover:bg-primary-green hover:text-white transition flex items-center justify-center">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="bg-white rounded-2xl shadow-lg card-hover overflow-hidden flex flex-col">
+                    <div class="h-48 overflow-hidden bg-gray-100 relative">
+                        <span class="absolute top-4 right-4 badge badge-green z-10 bg-white">Like New</span>
+                        <img src="../images/laptops/2.jpg" alt="Dell Inspiron" class="w-full h-full object-cover transform hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Dell Inspiron 15</h3>
+                        <p class="text-gray-500 text-sm mb-4">Core i7 10th Gen, 16GB RAM, 512GB SSD</p>
+                        <div class="mt-auto flex justify-between items-center">
+                            <span class="text-xl font-extrabold text-primary-purple">Rs. 115,000</span>
+                            <button class="w-10 h-10 rounded-full bg-gray-50 text-gray-400 hover:bg-primary-green hover:text-white transition flex items-center justify-center">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="bg-white rounded-2xl shadow-lg card-hover overflow-hidden flex flex-col">
+                    <div class="h-48 overflow-hidden bg-gray-100 relative">
+                        <span class="absolute top-4 right-4 badge badge-green z-10 bg-white">Good</span>
+                        <img src="../images/laptops/3.jpg" alt="Lenovo ThinkPad" class="w-full h-full object-cover transform hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Lenovo ThinkPad X1</h3>
+                        <p class="text-gray-500 text-sm mb-4">Core i5 7th Gen, 8GB RAM, 256GB SSD</p>
+                        <div class="mt-auto flex justify-between items-center">
+                            <span class="text-xl font-extrabold text-primary-purple">Rs. 69,000</span>
+                            <button class="w-10 h-10 rounded-full bg-gray-50 text-gray-400 hover:bg-primary-green hover:text-white transition flex items-center justify-center">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="bg-white rounded-2xl shadow-lg card-hover overflow-hidden flex flex-col">
+                    <div class="h-48 overflow-hidden bg-gray-100 relative">
+                        <span class="absolute top-4 right-4 badge badge-green z-10 bg-white">New</span>
+                        <img src="../images/laptops/5.jpg" alt="Acer Aspire" class="w-full h-full object-cover transform hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Acer Aspire 5</h3>
+                        <p class="text-gray-500 text-sm mb-4">Core i3 10th Gen, 4GB RAM, 128GB SSD</p>
+                        <div class="mt-auto flex justify-between items-center">
+                            <span class="text-xl font-extrabold text-primary-purple">Rs. 48,000</span>
+                            <button class="w-10 h-10 rounded-full bg-gray-50 text-gray-400 hover:bg-primary-green hover:text-white transition flex items-center justify-center">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product Card 5 (Gaming PC) -->
+                <div class="bg-white rounded-2xl shadow-lg card-hover overflow-hidden flex flex-col">
+                    <div class="h-48 overflow-hidden bg-gray-100 relative">
+                        <span class="absolute top-4 right-4 badge badge-green z-10 bg-white">Custom Build</span>
+                        <img src="../images/laptops/6.jpg" alt="Gaming PC" class="w-full h-full object-cover transform hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Custom Gaming PC</h3>
+                        <p class="text-gray-500 text-sm mb-4">Ryzen 5, 16GB RGB RAM, RTX 3060</p>
+                        <div class="mt-auto flex justify-between items-center">
+                            <span class="text-xl font-extrabold text-primary-purple">Rs. 185,000</span>
+                            <button class="w-10 h-10 rounded-full bg-gray-50 text-gray-400 hover:bg-primary-green hover:text-white transition flex items-center justify-center">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product Card 6 (Accessories) -->
+                <div class="bg-white rounded-2xl shadow-lg card-hover overflow-hidden flex flex-col">
+                    <div class="h-48 overflow-hidden bg-gray-100 relative">
+                        <span class="absolute top-4 right-4 badge badge-green z-10 bg-white">New</span>
+                        <img src="../images/laptops/13.jpg" alt="Accessories" class="w-full h-full object-cover transform hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Premium Accessories</h3>
+                        <p class="text-gray-500 text-sm mb-4">Chargers, Bags, Mouse, and Keyboards</p>
+                        <div class="mt-auto flex justify-between items-center">
+                            <span class="text-xl font-extrabold text-primary-purple">From Rs. 500</span>
+                            <button class="w-10 h-10 rounded-full bg-gray-50 text-gray-400 hover:bg-primary-green hover:text-white transition flex items-center justify-center">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sales Services Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
+            <div class="section-header">
+                <h2>Our Sales Services</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card p-8 text-center group">
+                    <div class="service-icon-box">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Brand New Laptops</h3>
+                    <p class="text-gray-500 text-sm">We provide the latest models from top brands completely box-packed with official warranty and dedicated support.</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card p-8 text-center group">
+                    <div class="service-icon-box">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Used & Refurbished</h3>
+                    <p class="text-gray-500 text-sm">High-quality, thoroughly tested refurbished laptops at highly affordable prices, ensuring you get the best value.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card p-8 text-center group">
+                    <div class="service-icon-box">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Buy Back Program</h3>
+                    <p class="text-gray-500 text-sm">Looking to upgrade? Sell us your old laptop for cash or trade it in for a discount on a newer model.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted Brands -->
+    <section class="py-16 bg-gray-50 border-t border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
+            <h3 class="text-center text-sm font-bold text-gray-400 uppercase tracking-widest mb-8">Trusted Brands We Carry</h3>
+            <div class="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-70">
+                <div class="text-center group cursor-pointer hover:opacity-100 transition">
+                    <i class="fab fa-apple text-5xl text-gray-700 group-hover:text-black"></i>
+                    <p class="text-xs font-semibold mt-2 text-gray-500">Apple</p>
+                </div>
+                <div class="text-center group cursor-pointer hover:opacity-100 transition">
+                    <i class="fas fa-laptop text-5xl text-gray-700 group-hover:text-blue-600"></i>
+                    <p class="text-xs font-semibold mt-2 text-gray-500">Dell</p>
+                </div>
+                <div class="text-center group cursor-pointer hover:opacity-100 transition">
+                    <i class="fas fa-laptop text-5xl text-gray-700 group-hover:text-primary-purple"></i>
+                    <p class="text-xs font-semibold mt-2 text-gray-500">HP</p>
+                </div>
+                <div class="text-center group cursor-pointer hover:opacity-100 transition">
+                    <i class="fas fa-laptop text-5xl text-gray-700 group-hover:text-red-600"></i>
+                    <p class="text-xs font-semibold mt-2 text-gray-500">Lenovo</p>
+                </div>
+                <div class="text-center group cursor-pointer hover:opacity-100 transition">
+                    <i class="fas fa-laptop text-5xl text-gray-700 group-hover:text-green-600"></i>
+                    <p class="text-xs font-semibold mt-2 text-gray-500">Acer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Quote Section -->
+    <section id="quote" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100">
+                <div class="grid md:grid-cols-2">
+                    <!-- Contact Info -->
+                    <div class="bg-dark-bg p-12 text-white relative overflow-hidden dark-section">
+                        <div class="relative z-10">
+                            <h3 class="text-3xl font-bold mb-6">Let's Find Your Perfect Laptop</h3>
+                            <p class="text-gray-300 mb-10 leading-relaxed">Whether you need a high-performance gaming rig or a reliable office laptop, our team is here to provide you with the best quote.</p>
+                            
+                            <div class="space-y-6">
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
+                                        <i class="fas fa-clock text-primary-green"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-semibold mb-1">Business Hours</h5>
+                                        <p class="text-gray-400 text-sm">Mon - Sat: 9:00 AM - 8:00 PM</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
+                                        <i class="fas fa-phone-alt text-primary-green"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-semibold mb-1">Call Us</h5>
+                                        <p class="text-gray-400 text-sm">0334-343-4300 / 0333-920-6363</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
+                                        <i class="fas fa-envelope text-primary-green"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-semibold mb-1">Email</h5>
+                                        <p class="text-gray-400 text-sm">khyberstarcnr@gmail.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Form -->
+                    <div class="p-12 bg-white">
+                        <h3 class="text-2xl font-bold mb-6 text-gray-800">Request a Quote</h3>
+                        <form class="space-y-5">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                                <input type="text" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-primary-green focus:ring-2 focus:ring-green-100 transition" placeholder="John Doe">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                                <input type="tel" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-primary-green focus:ring-2 focus:ring-green-100 transition" placeholder="03xx-xxxxxxx">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Preferred Brand</label>
+                                <select class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:border-primary-green focus:ring-2 focus:ring-green-100 transition appearance-none">
+                                    <option>Select a brand...</option>
+                                    <option>Apple</option>
+                                    <option>Dell</option>
+                                    <option>HP</option>
+                                    <option>Lenovo</option>
+                                    <option>Other / Custom Build</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="w-full btn-primary text-lg mt-4">GET QUOTE</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-white pt-16 pb-10 border-t-4 border-primary-green">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <i class="fas fa-laptop text-3xl text-primary-green"></i>
+                        <span class="text-2xl font-bold tracking-tight">Khyber Star</span>
+                    </div>
+                    <p class="text-gray-400 mb-6 text-sm leading-relaxed">
+                        Your Trusted Technology & Support Partner in Khyber. Providing premium laptops and unmatched sales support.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Company</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="index.html" class="hover:text-primary-green transition">Home</a></li>
+                        <li><a href="selling.html" class="hover:text-primary-green transition text-primary-green">Laptop Sales</a></li>
+                        <li><a href="repairing.html" class="hover:text-primary-green transition">Repair Services</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Support</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="#" class="hover:text-primary-green transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-primary-green transition">Terms & Condition</a></li>
+                        <li><a href="#quote" class="hover:text-primary-green transition">Get a Quote</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Contact</h4>
+                    <ul class="space-y-4 text-gray-400 text-sm">
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-map-marker-alt text-primary-green mt-1"></i>
+                            <span>Bara Bazar, Khyber Chowk, Pakistan</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-phone-alt text-primary-green"></i>
+                            <span>0334-343-4300</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-500">
+                <p>© 2026 Khyber Star Laptop Center – All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // GSAP Animations
+        gsap.from(".hero-content h1", { duration: 1, y: 30, opacity: 0, ease: "power3.out" });
+        gsap.from(".hero-content p", { duration: 1, y: 20, opacity: 0, delay: 0.2, ease: "power3.out" });
+        gsap.from(".hero-content ul li", { duration: 0.5, x: -20, opacity: 0, stagger: 0.1, delay: 0.4, ease: "power2.out" });
+        gsap.from(".hero-content a", { duration: 1, y: 20, opacity: 0, delay: 0.6, ease: "power3.out" });
+        
+        // Setup observer for scroll animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    if(entry.target.classList.contains('service-card') || entry.target.classList.contains('card-hover')){
+                        gsap.to(entry.target, {duration: 0.6, y: 0, opacity: 1, ease: "power2.out"});
+                    }
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.service-card, .card-hover').forEach(el => {
+            gsap.set(el, {y: 50, opacity: 0});
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
